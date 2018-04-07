@@ -1,0 +1,232 @@
+
+
+<br><br><br><br><br>
+<div id="container"  >
+
+  <div id="sideMenu">
+    <h1>COINS LISTS</h1>
+
+    <ul class="menu">
+      <!--<li><a routerLink="/getcoin">GET-PREDICTION</a></li>-->
+      <li><a routerLink="/getcoin/ETH">ETHEREUM <span class="colorIcon red"></span></a></li>
+      <li><a routerLink="/getcoin/LTC">LITECOIN <span class="colorIcon orange"></span></a></li>
+      <li><a routerLink="/getcoin/DASH">DASHCOIN <span class="colorIcon green"></span></a></li>
+      <li><a routerLink="/getcoin/DGB">DIGIBYTE <span class="colorIcon green"></span></a></li>
+      <li><a routerLink="/getcoin/ETC">ETHEREUM CLASSIC <span class="colorIcon green"></span></a></li>
+    </ul>
+  </div>
+  <div id="content">
+    <div id="titleBar">
+      <h2>DASH</h2>
+      <br>
+      <h2>{{countDown2 | async}}:{{countDown | async}}  {{timelimit}} </h2>
+      <br>
+      <a>
+        <button style="font-weight:bold;" class="btn btn-warning btn-round btn-sm" type="button" (click)="getDashPrediction()" name="button">Prediction</button>
+      </a>
+      <a>
+        <button style="font-weight:bold;" class="btn btn-success btn-round btn-sm" type="button" (click)="getDashTweet()" name="button">Tweet</button>
+      </a>
+      <div>
+      </div>
+
+
+
+
+      <br>
+
+      <div  id="tradingview_0d880"></div>
+
+    </div>
+    <div id="content">
+
+      <div class="mainChart">
+        <canvas id="salesData"></canvas>
+
+
+        <br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br>
+
+
+        <div class="row">
+
+          <div class="col-xs-4">
+            <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Current Price:</h2>
+          </div>
+
+          <div class="col-xs-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+          <div class="col-xs-4">
+            <h2>Predicted Price:</h2>            </div>
+
+          <br><br>
+
+
+
+          <div class="row">
+
+            <div class="col-xs-4">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+              <div _ngcontent-c3="" class="coinmarketcap-currency-widget" data-base="USD" data-currencyid="131" data-marketcap="true" data-rank="true" data-secondary="" data-stats="USD" data-statsticker="true" data-ticker="true" data-volume="true" style="background: rgb(37, 49, 55); float: right; box-sizing: border-box; line-height: 1;"><div style="border:2px solid #E4E6EB;border-radius: 10px;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;min-width:285px;">    <div>        <div style="float:right;width:67%;border: 0px solid #000;text-align:left;padding:5px 0px;line-height:30px;">            <span style="font-size: 18px;"><a href="http://coinmarketcap.com/currencies/undefined/?utm_medium=widget&amp;utm_campaign=cmcwidget&amp;utm_source=localhost&amp;utm_content=undefined" target="_blank" style="text-decoration: none; color: rgb(66, 139, 202);">Dash (DASH)</a></span> <br>            <span style="font-size: 16px;">626.61 USD <span style="color:#093">(3.20%)</span></span>                    </div>        <div style="text-align:center;padding:5px 0px;width:33%;"><img src="https://files.coinmarketcap.com/static/img/coins/64x64/131.png"></div>    </div><div style="border-top: 1px solid #E4E6EB;clear:both;">                    <div style="text-align:center;float:left;width:33%;font-size:12px;padding:12px 0;border-right:1px solid #E4E6EB;line-height:1.25em;">                        RANK                        <br><br>                        <span style="font-size: 17px; ">10</span>                    </div>                    <div style="text-align:center;float:left;width:33%;font-size:12px;padding:12px 0 16px 0;border-right:1px solid #E4E6EB;line-height:1.25em;">                        MARKET CAP                        <br><br>                        <span style="font-size: 14px; ">$4.95 B <span style="font-size:9px">USD</span></span>                    </div>                    <div style="text-align:center;float:left;width:33%;font-size:12px;padding:12px 0 16px 0;line-height:1.25em;">                        VOLUME (24H)                        <br><br>                        <span style="font-size: 14px; ">$91.39 M <span style="font-size:9px">USD</span></span>                    </div></div>    <div style="border-top: 1px solid #E4E6EB;text-align:center;clear:both;font-size:10px;font-style:italic;padding:5px 0;">        <a href="http://coinmarketcap.com?utm_medium=widget&amp;utm_campaign=cmcwidget&amp;utm_source=localhost&amp;utm_content=undefined" target="_blank" style="text-decoration: none; color: rgb(66, 139, 202);">Powered by CoinMarketCap</a>    </div></div></div>
+
+            </div>
+
+            <div class="col-xs-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+            <div class="col-xs-4">
+              <div   style="background: rgb(37, 49, 55); float: right; box-sizing: border-box; line-height: 1;">
+                <div style="border:2px solid #E4E6EB;border-radius: 10px;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;min-width:285px;">
+                  <div>
+                    <div style="float:right;width:67%;border: 0px solid #000;text-align:left;padding:5px 0px;line-height:30px;">
+                    <span style="font-size: 18px;">
+                      <a  style="text-decoration: none; color: rgb(66, 139, 202);">Ethereum (ETH)
+                      </a>
+                    </span>
+                      <br>
+                      <span style="font-size: 16px;">818.83 USD <span style="color:#d14836">
+                      (-2.61%)
+                    </span>
+                    </span>
+                    </div>
+                    <div style="text-align:center;padding:5px 0px;width:33%;">
+                      <img src="https://files.coinmarketcap.com/static/img/coins_legacy/64x64/ethereum.png">
+                    </div>
+                  </div>
+                  <!--<div style="border-top: 1px solid #E4E6EB;clear:both;">-->
+                  <!--<div style="text-align:center;float:left;width:33%;font-size:12px;padding:12px 0;border-right:1px solid #E4E6EB;line-height:1.25em;">-->
+                  <!--RANK-->
+                  <!--<br><br>-->
+                  <!--<span style="font-size: 17px; ">2-->
+                  <!--</span>-->
+                  <!--</div>-->
+                  <!--<div style="text-align:center;float:left;width:33%;font-size:12px;padding:12px 0 16px 0;border-right:1px solid #E4E6EB;line-height:1.25em;">-->
+                  <!--MARKET CAP-->
+                  <!--<br><br>-->
+                  <!--<span style="font-size: 14px; ">-->
+                  <!--$80.06 B-->
+                  <!--</span>-->
+                  <!--</div>-->
+                  <!--<div style="text-align:center;float:left;width:33%;font-size:12px;padding:12px 0 16px 0;line-height:1.25em;">-->
+                  <!--VOLUME (24H)-->
+                  <!--<br><br>-->
+                  <!--<span style="font-size: 14px; ">-->
+                  <!--$2.21 B-->
+                  <!--</span>-->
+                  <!--</div>-->
+                  <!--</div>-->
+                  <div style="border-top: 1px solid #E4E6EB;text-align:center;clear:both;font-size:10px;font-style:italic;padding:5px 0;">
+                    <a style="text-decoration: none; color: rgb(66, 139, 202);">
+                      Powered by ASK LEPRECHAUN
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+
+
+          </div>
+
+
+
+
+
+          <div class="clearFix"></div>
+
+          <!--<div id="totalSales">-->
+          <!--<div class="col">-->
+          <!--<div id="creditSales" class="progressBar" ></div>-->
+
+
+          <!--<h3>£5,390                        </h3>-->
+
+
+          <!--&lt;!&ndash;<div class="tradingview-widget-container">&ndash;&gt;-->
+          <!--&lt;!&ndash;<div id="tradingview_0d880"></div>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+          <!--<span class="progressTitle">Education Spend</span>-->
+          <!--</div>-->
+          <!--<div class="col">-->
+          <!--<div id="channelSales" class="progressBar"></div>-->
+          <!--<h3>£904.37</h3>-->
+          <!--<span class="progressTitle">Holiday Spend</span>-->
+          <!--</div>-->
+          <!--<div class="col">-->
+          <!--<div id="directSales" class="progressBar"></div>-->
+          <!--<h3>£0</h3>-->
+          <!--<span class="progressTitle">Cost of Living</span>-->
+          <!--</div>-->
+          <!--</div>-->
+
+
+          <br>
+
+          <br>
+
+
+          <br>
+
+          <br>
+
+
+          <!--<table>-->
+          <!--<tr>-->
+          <!--<th>Living Expenses</th>-->
+          <!--<th>Description</th>-->
+          <!--<th>Cost</th>-->
+          <!--</tr>-->
+
+          <!--<tr>-->
+          <!--<td>Travel<br></td>-->
+          <!--<td>TFL</td>-->
+          <!--<td></td>-->
+          <!--</tr>-->
+
+          <!--<tr>-->
+          <!--<td>Grocery<br></td>-->
+          <!--<td>Lunches & Supermarket</td>-->
+          <!--<td></td>-->
+          <!--</tr>-->
+
+          <!--<tr>-->
+          <!--<td>Social<br></td>-->
+          <!--<td>Drinks, Dinners & Clubs</td>-->
+          <!--<td></td>-->
+          <!--</tr>-->
+
+          <!--<tr>-->
+          <!--<td>Wellbeing<br></td>-->
+          <!--<td>Massages, Pedicures etc.</td>-->
+          <!--<td></td>-->
+          <!--</tr>-->
+
+          <!--<tr>-->
+          <!--<td>Misc.<br></td>-->
+          <!--<td>Miscellaneous</td>-->
+          <!--<td></td>-->
+          <!--</tr>-->
+          <!--</table>-->
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!--&lt;!&ndash;<div class="coinmarketcap-currency-widget" style="background: rgb(37, 49, 55); float: right; box-sizing: border-box; line-height: 1;" data-currency="bitcoin" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-stats="USD" data-statsticker="false"></div>&ndash;&gt;-->
+
+
+
+
+
+
+</div>

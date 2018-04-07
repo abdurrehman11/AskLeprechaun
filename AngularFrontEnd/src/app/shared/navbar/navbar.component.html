@@ -1,0 +1,54 @@
+    <nav class="navbar navbar-expand-lg fixed-top " color-on-scroll="500">
+	
+
+	
+	
+    <div class="container">
+        <div class="navbar-translate" >
+			
+            <a class="navbar-brand" style="color:black; font-size:25px;  font-family:Arial,Helvetica,sans-serif; ">
+			<img style="padding-right:10px;" src="../../../assets/img/Lucky_the_leprechaun.png">
+			
+			Ask <span style="color:#00973A;">LEPRECHAUN</span></a>
+            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+                    <a style="color:black; font-size:16px;  font-family:Arial,Helvetica,sans-serif;" class="nav-link"  routerLink="/home">HOME</a>
+                </li>
+
+                <li class="nav-item">
+                    <a style="color:black; font-size:16px;  font-family:Arial,Helvetica,sans-serif;" class="nav-link" routerLink="/aboutus">ABOUT US</a>
+                </li>
+
+                <li class="nav-item">
+                    <a style="color:black; font-size:16px;  font-family:Arial,Helvetica,sans-serif;" class="nav-link" routerLink="/faqs">FAQS</a>
+                </li>
+
+                <li class="nav-item">
+                    <a style="color:black; font-size:16px;  font-family:Arial,Helvetica,sans-serif;" class="nav-link" routerLink="/getcoin">GET-COIN</a>
+                </li>
+
+                <li class="nav-item" *ngIf="!authService.loggedIn()">
+                    <a style="color:black; font-size:16px;  font-family:Arial,Helvetica,sans-serif;" class="nav-link" routerLink="/login">LOGIN</a>
+                </li>   
+
+                <li class="nav-item" *ngIf="!authService.loggedIn()">
+                    <a style="color:black; font-size:16px;  font-family:Arial,Helvetica,sans-serif;" class="nav-link" routerLink="/signup">REGISTER</a>
+                </li>
+
+                <li class="nav-item" *ngIf="authService.loggedIn()">
+                    <a style="color:black; font-size:16px;  font-family:Arial,Helvetica,sans-serif;" class="nav-link" href="#" (click)="onLogoutClick()">LOGOUT</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+</nav>

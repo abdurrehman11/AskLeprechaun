@@ -1,0 +1,523 @@
+*{box-sizing: border-box;}
+body{
+  padding: 3em;
+}
+nav{
+  width: 20%;
+  min-width: 18em;
+  margin: 0 auto;
+}
+h1{
+  position: relative;
+  display: inline-block;
+  font: 2em/1em sans-serif;
+  cursor: pointer;
+  user-select: none;
+  height: 2.1em;
+}
+h1:after{
+  content:"";
+  border: 10px solid transparent;
+  border-top-color: #ccc;
+  position: absolute;
+  right: -30px;
+  top: 15px;
+}
+h1:hover + ul{
+  display: block;
+}
+ul{
+  background: #eee;
+  border: 1px solid #ddd;
+  border-radius: 1%;
+  display: none;
+  position: relative;
+  top: -1.5em;
+}
+ul:hover{
+  display: block;
+}
+li{
+  padding: 3% 5%;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+li:first-child{border-top: none;}
+li:last-child{border-bottom: none;}
+li:hover{background: linear-gradient(#eee,#ddd);}
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
+.float-right{
+  float: right;
+}
+.fa{
+  font-size: .8em;
+  line-height: 22px !important;
+}
+dropdown{
+  display: inline-block;
+  margin: 20px 50px;
+}
+dropdown label, dropdown ul li{
+  display: block;
+  width: 200px;
+  background: #ECF0F1;
+  padding: 15px 20px;
+}
+dropdown label:hover, dropdown ul li:hover{
+  background: #1ABC9C;
+  color: white;
+  cursor: pointer;
+}
+dropdown label{
+  color: #1ABC9C;
+  border-left: 4px solid #1ABC9C;
+  border-radius: 0 5px 0 0;
+  position: relative;
+  z-index: 2;
+}
+dropdown input{
+  display: none;
+}
+dropdown input ~ ul{
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  top: -20px;
+  z-index: 1;
+}
+dropdown input:checked + label{
+  background: #1ABC9C;
+  color: white;
+}
+
+dropdown input:checked ~ ul{
+  visibility: visible;
+  opacity: 1;
+  top: 0;
+}
+$colors: #E74C3C, #0072B5, #2C3E50;
+
+@for $i from 1 through length($colors) {
+  dropdown ul li:nth-child(#{$i}) {
+    border-left: 4px solid nth($colors, $i);
+    .fa{
+      color: nth($colors, $i);
+    }
+    &:hover {
+      background: nth($colors, $i);
+      color: white;
+      .fa{
+        color: white;
+      }
+    }
+  }
+}
+
+.animate{
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden; /* Chrome and Safari */
+  -moz-backface-visibility:hidden; /* Firefox */
+  -ms-backface-visibility:hidden; /* Internet Explorer */
+}
+
+
+.selector {
+  width: 250px;
+  Height: 40px;
+  border: 0px;
+  border-bottom: 2px solid #ED4F13;
+  border-radius: 3px;
+  font: normal normal 13px/normal "Raleway", Helvetica, sans-serif;
+
+}
+
+.bootan {
+  box-shadow:none;
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 210px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 2px solid #ED4F13;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal normal 13px/normal "Raleway", Helvetica, sans-serif;
+  color: #fff;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #ED4F13;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.bootan:hover {
+  box-shadow:none;
+  border: 2px solid #ED4F13;
+  color: #ED4F13;
+  background: #fff;
+}
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+* {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  width: 100vw;
+  height: 900px;
+  //background-color: #cbd0d8;
+}
+.container h1 {
+  text-align: center;
+  position: relative;
+  top: 50px;
+  color: white;
+  font-family: 'Ubuntu';
+  letter-spacing: 10px;
+}
+.hoverme {
+  top: 100px;
+  width: 400px;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.hoverme p {
+  font-family: 'Lato', sans-serif;
+  list-style-type: none;
+  width: 400px;
+  height: 50px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  letter-spacing: 5px;
+  background-color: #f2a2e8;
+  transition: all 200ms ease-in-out;
+  z-index: 50;
+}
+.hoverme p:hover {
+  background-color: #ea69d9;
+  color: black;
+  letter-spacing: 6px;
+}
+.hoverme:hover nav {
+  top: 0;
+}
+nav {
+  position: relative;
+  top: -300px;
+  transition: all 300ms ease-in-out;
+  transition-delay: 200ms;
+
+}
+li {
+  font-family: 'Lato', sans-serif;
+  list-style-type: none;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  letter-spacing: 5px;
+  transition: all 200ms ease-in-out;
+}
+li:hover {
+  letter-spacing: 3px;
+  font-size: 16px;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+/*
+
+JASON KORABLIN
+DROP DOWN Menu
+
+HERE IS THE CSS NEEDED TO IMPLEMENT THE DROP DOWN MENU.
+IT IS DESIGNED TO TAKE UP THE WIDTH OF THE CONTAINER THAT IT IS PLACED INSIDE OF.
+
+*/
+
+body {
+  background-color: #365670;
+}
+
+.container {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  color: #94B1E3;
+  text-align: center;
+  margin-bottom: 100px;
+  transition: all 100ms ease-in-out;
+}
+
+h1:hover {
+  color: white;
+  transform: scale(1.025);
+  cursor: pointer;
+}
+
+
+/* STYLING FOR THE NAME OF EACH DROP DOWN */
+.dropdown h3 {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* TOP LEVEL LIST THAT WILL EITHER HOLD 1 <LI> FOR A SINGLE DROP DOWN; OR MULTIPLE <LI> FOR A NAV WITH DROP DOWN FUNCTIONALITY. */
+.dropdown ul {
+  margin: 0;
+  padding: 0;
+
+  display: flex; /* THIS IS FOR A RESPONSIVE HORIZONTAL LAYOUT OF THE TOP LEVEL LIST */
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* PROPERTIES FOR EACH <LI> IN THE TOP LEVEL LIST. */
+.dropdown ul li {
+  list-style: none;
+  position: relative;
+  margin-right: 15px;
+  flex-basis: 100%;
+
+  display: flex; /* THIS IS TO CENTER AND SPACE THE NAME AND ARROW SYMBOL */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 13px;
+  background-color: #FAFCFC;
+  box-shadow: 0px 3px 0px #9C9C9C;
+  color: #121212;
+}
+
+/* STYLING FOR THE NAME OF EACH TOP LEVEL <LI> */
+.dropdown ul li p {
+  width: 100%;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  word-wrap: break-word;
+  padding: 2px 10px 2px 10px;
+}
+
+/* STYLING FOR THE LINKS INSIDE OF THE LISTS */
+.dropdown ul li a {
+  padding: 10px;
+  color: #121212;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  word-wrap: break-word;
+
+}
+
+/* PROPERTIES OF THE BOTTOM LEVEL LIST. */
+.dropdown ul li ul {
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: 1;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  transition: all 300ms ease-in-out;
+
+}
+
+/* FUNCTIONALITY FOR THE FADE IN VISIBILITY FOR THE BOTTOM LEVEL MENU */
+.dropdown ul li:hover ul {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* PROPERTIES OF EACH <LI> IN THE BOTTOM LEVEL LIST */
+.dropdown ul li ul li {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px 20px 0px;
+  text-align: center;
+  width: 100%;
+
+
+  transition: all 300ms ease-in-out;
+}
+
+/* FUNCTIONALITY FOR THE COLOR CHANGE WHEN HOVERING OVER A <LI> */
+.dropdown ul li ul li:hover {
+  background-color: #DEDEDE;
+}
+
+/* SYLING OF THE DOWN ARROW SYMBOL */
+.dropdown-arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #293540;
+  margin-right: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//wrap drop
+
+//html,body {
+//  background-color:#43362a;
+//  font-family:"Maven Pro", sans-serif;
+//  padding:2rem 1rem;
+//}
+//
+//.wrap-drop {
+//  background:#e7ded5;
+//  box-shadow:3px 3px 3px rgba(0,0,0,.2);
+//  cursor:pointer;
+//  margin:0 auto;
+//  max-width:225px;
+//  padding:1rem;
+//  position:relative;
+//  width:75%;
+//  z-index:3;
+//}
+//
+//.wrap-drop::after {
+//  border-color:#695d52 transparent;
+//  border-style:solid;
+//  border-width:10px 10px 0;
+//  content:"";
+//  height:0;
+//  margin-top:-4px;
+//  position:absolute;
+//  right:1rem;
+//  top:50%;
+//  width:0;
+//}
+//
+//.wrap-drop .drop {
+//  background:#e7ded5;
+//  box-shadow:3px 3px 3px rgba(0,0,0,.2);
+//  display:none;
+//  left:0;
+//  list-style:none;
+//  margin-top:0;
+//  opacity:0;
+//  padding-left:0;
+//  pointer-events:none;
+//  position:absolute;
+//  right:0;
+//  top:100%;
+//  z-index:2;
+//}
+//
+//.wrap-drop .drop li a {
+//  color:#695d52;
+//  display:block;
+//  padding:1rem;
+//  text-decoration:none;
+//}
+//
+//.wrap-drop span {
+//  color:#928579;
+//}
+//
+//.wrap-drop .drop li:hover a {
+//  background-color:#695d52;
+//  color:#e7ded5;
+//}
+//
+//.wrap-drop.active::after {
+//  border-width:0 10px 10px;
+//}
+//
+//.wrap-drop.active .drop {
+//  display:block;
+//  opacity:1;
+//  pointer-events:auto;
+//}

@@ -1,0 +1,66 @@
+.parallax {
+    /* The image used */
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#rcorners2 {
+  border-radius: 25px;
+  background: rgb(37, 49, 55);
+  //border: 2px solid #73AD21;
+  //padding: 20px;
+
+}
+
+
+
+.container {
+  width: 100%;
+  margin: 30px auto;
+}
+
+.expandable-boxes {
+	
+  position: relative;
+}
+
+.expandable-box {
+  width: 30%;
+  height: 130px;
+  float: left;
+  margin: 0 3% 20px 0;
+  border: 7px solid #E8E8E8;
+  border-radius: 1px;
+  padding: 10px;
+  box-sizing: border-box;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  
+  &.open {
+    border-color: #dd0000;
+    width: 96%;
+    height: 180px;
+    margin: 0;
+  }
+  
+  &.out {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+  }
+}
